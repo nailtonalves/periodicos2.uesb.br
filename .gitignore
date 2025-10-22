@@ -1,0 +1,13 @@
+/.project
+/.svn
+/temp
+/logs
+/storage
+composer.lock
+/vendor
+/nbproject
+/_.svn/
+.buildpath
+.settings
+/.vscode
+bd.config.php
