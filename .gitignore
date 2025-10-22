@@ -5,9 +5,4 @@
 /storage
 composer.lock
 /vendor
-/nbproject
-/_.svn/
-.buildpath
-.settings
-/.vscode
-bd.config.php
+/volumes/arquivos-sistema/

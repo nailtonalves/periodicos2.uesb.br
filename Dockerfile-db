@@ -1,0 +1,23 @@
+# Dockerfile.postgres
+FROM postgres:12
+
+# Definir variáveis de ambiente padrão
+ENV POSTGRES_USER=postgres \
+    POSTGRES_PASSWORD=ojs \
+    POSTGRES_DB=ojs
+
+# Criar diretório para scripts de inicialização
+RUN mkdir -p /docker-entrypoint-initdb.d
+
+# Copiar scripts SQL para inicialização do banco
+COPY ./volumes/arquivos-sistema/dump-db/ /docker-entrypoint-initdb.d/
+RUN mv /docker-entrypoint-initdb.d/ojs_backup_20230224.sql /docker-entrypoint-initdb.d/init.sql
+
+# Configurar pg_hba.conf para aceitar conexões (opcional - desenvolvimento apenas)
+RUN echo "host all all 0.0.0.0/0 md5" >> /usr/share/postgresql/pg_hba.conf.sample
+
+# Porta exposta
+EXPOSE 5432
+
+# Comando de inicialização padrão do PostgreSQL
+CMD ["postgres"]
