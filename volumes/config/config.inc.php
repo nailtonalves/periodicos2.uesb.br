@@ -289,7 +289,8 @@ encryption = sha1
 salt = "YouMustSetASecretKeyHere!!"
 
 ; The unique secret used for encoding and decoding API keys
-api_key_secret = ""
+; decodificação de chave de API em base64 em https://base64.guru/converter"
+api_key_secret = "UGVyaW9kaWNvc0AyMDI1LnVlc2I="
 
 ; The number of seconds before a password reset hash expires (defaults to 7200 / 2 hours)
 reset_seconds = 7200

@@ -52,6 +52,8 @@ COPY ./volumes/correcoes/display.tpl /var/www/html/plugins/generic/pdfJsViewer/t
 COPY ./volumes/correcoes/viewer.js /var/www/html/plugins/generic/pdfJsViewer/pdf.js/web/viewer.js
 COPY ./volumes/correcoes/viewer.js.map /var/www/html/plugins/generic/pdfJsViewer/pdf.js/web/viewer.js.map
 COPY ./volumes/correcoes/PKPRequest.inc.php /var/www/html/lib/pkp/classes/core/PKPRequest.inc.php
+COPY ./volumes/correcoes/PKPSitemapHandler.inc.php /var/www/html/lib/pkp/pages/sitemap/PKPSitemapHandler.inc.php
+
 # COPY ./volumes/config/update-ojs.sh /tmp/update.sh
 
 # Torne o script executável
