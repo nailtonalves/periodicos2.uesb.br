@@ -1,3 +1,14 @@
+# Comandos úteis
+```bash
+docker build -f Dockerfile-ojs -t registry.uesb.br/sistemas-web/ojs_periodicos_lts:1.0.4 .
+docker push registry.uesb.br/sistemas-web/ojs_periodicos_lts:1.0.4   
+
+```
+
+
+
+
+
 # easyOJS - OJS in a docker
 
 

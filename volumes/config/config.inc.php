@@ -341,7 +341,8 @@ smtp_port = 587
 ; Supported smtp_auth: ssl, tls (see PHPMailer SMTPSecure)
 smtp_auth = tls
 smtp_username = periodicos@uesb.edu.br
-smtp_password = rswiugsbnucbbykd
+;smtp_password = rswiugsbnucbbykd
+smtp_password = xweuephwlksvithl
 ;
 ; Supported smtp_authtype: RAM-MD5, LOGIN, PLAIN, XOAUTH2 (see PHPMailer AuthType)
 ; (Leave blank to try them in that order)
