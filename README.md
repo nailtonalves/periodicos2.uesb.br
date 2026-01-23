@@ -1,45 +1,4 @@
-# Periodicos2 UESB - Open Journal Systems (OJS)
-
-## 🔒 Segurança
-
-Este projeto implementa múltiplas camadas de proteção para o arquivo `config.inc.php` e outros arquivos sensíveis:
-
-- ✅ Permissões restritas (640) aplicadas durante o build
-- ✅ Apache FilesMatch bloqueando acesso direto
-- ✅ .htaccess com proteções adicionais
-- ✅ Limpeza automática de arquivos de backup
-- ✅ Options -Indexes desabilitado
-
-**📖 Documentação de Segurança:**
-- [SECURITY-QUICKSTART.md](SECURITY-QUICKSTART.md) - Guia rápido
-- [SECURITY-README.md](SECURITY-README.md) - Documentação completa
-- [PORTAINER-DEPLOY-GUIDE.md](PORTAINER-DEPLOY-GUIDE.md) - Deploy via Portainer
-
-## 🚀 Deploy em Produção
-
-Este projeto usa **Portainer** para deploy em produção. As proteções de segurança são aplicadas automaticamente durante o build da imagem Docker.
-
-### Build da Imagem
-
-```powershell
-# Windows PowerShell
-.\build-and-test.ps1          # Build + Testes + Deploy local
-
-# Ou manualmente:
-docker build -f Dockerfile-ojs -t periodicos2-ojs:latest .
-```
-
-```bash
-# Linux/Mac
-docker build -f Dockerfile-ojs -t periodicos2-ojs:latest .
-```
-
-### Deploy via Portainer
-
-Consulte o guia completo: **[PORTAINER-DEPLOY-GUIDE.md](PORTAINER-DEPLOY-GUIDE.md)**
-
-## 🛠️ Comandos Úteis (Build & Push Registry)
-
+# Comandos úteis
 ```bash
 # Build com tag de versão
 docker build -f Dockerfile-ojs -t registry.uesb.br/sistemas-web/ojs_periodicos_lts:1.0.4 .
