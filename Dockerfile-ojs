@@ -41,8 +41,24 @@ RUN rm /var/www/html/config.inc.php && \
     
 COPY ./volumes/config/config.inc.php /var/www/html/config.inc.php
 
-# Não é necessário em produção
-# COPY ./volumes/config/.htaccess /var/www/html/.htaccess
+# Copiar .htaccess para proteção adicional
+COPY ./volumes/config/.htaccess /var/www/html/.htaccess
+
+# Aplicar permissões de segurança ao config.inc.php
+RUN chmod 640 /var/www/html/config.inc.php && \
+    chown apache:apache /var/www/html/config.inc.php && \
+    # Proteger outros arquivos .inc.php
+    find /var/www/html -name "*.inc.php" -type f -exec chmod 640 {} \; && \
+    find /var/www/html -name "*.inc.php" -type f -exec chown apache:apache {} \; && \
+    # Remover arquivos de backup se existirem
+    find /var/www/html -name "*.bak" -type f -delete && \
+    find /var/www/html -name "*.backup" -type f -delete && \
+    # Proteger .htaccess
+    chmod 644 /var/www/html/.htaccess && \
+    chown apache:apache /var/www/html/.htaccess
+
+# Copiar configuração Apache com proteções de segurança
+COPY ./volumes/config/ojs.conf /etc/apache2/conf.d/ojs-security.conf
 
 # Correções de códigos - todos os arquivos em uma única camada
 COPY ./volumes/correcoes/display.tpl /var/www/html/plugins/generic/pdfJsViewer/templates/display.tpl

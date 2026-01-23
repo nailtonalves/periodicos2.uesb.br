@@ -1,0 +1,52 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentação (não necessária na imagem)
+*.md
+LICENSE
+README.md
+SECURITY-README.md
+SECURITY-QUICKSTART.md
+PORTAINER-DEPLOY-GUIDE.md
+
+# Arquivos de desenvolvimento
+.vscode
+.idea
+*.code-workspace
+
+# Logs e temporários
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*~
+
+# Backups de banco
+volumes/arquivos-sistema/dump-db/*.sql
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Scripts de desenvolvimento
+volumes/config/secure-config.sh
+
+# Arquivos do Docker Compose (já na imagem)
+docker-compose.yml
+docker-compose.*.yml
+
+# Cache
+.cache
+__pycache__
+*.pyc
+node_modules
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

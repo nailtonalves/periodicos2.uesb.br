@@ -6,3 +6,29 @@
 composer.lock
 /vendor
 /volumes/arquivos-sistema/
+
+# Arquivos de configuração sensíveis
+/volumes/config/config.inc.php
+*.env
+.env.*
+!.env.example
+
+# Backups e arquivos temporários
+*.bak
+*.backup
+*.old
+*~
+*.sql
+*.dump
+
+# Logs sensíveis
+*.log
+
+# Certificados e chaves
+*.pem
+*.key
+*.crt
+*.cer
+
+*.md
+!README.md
