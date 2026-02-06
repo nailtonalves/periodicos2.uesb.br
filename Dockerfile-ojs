@@ -51,8 +51,8 @@ RUN chmod 640 /var/www/html/config.inc.php && \
     find /var/www/html -name "*.inc.php" -type f -exec chmod 640 {} \; && \
     find /var/www/html -name "*.inc.php" -type f -exec chown apache:apache {} \; && \
     # Remover arquivos de backup se existirem
-    find /var/www/html -name "*.bak" -type f -delete && \
-    find /var/www/html -name "*.backup" -type f -delete && \
+    # find /var/www/html -name "*.bak" -type f -delete && \
+    # find /var/www/html -name "*.backup" -type f -delete && \
     # Proteger .htaccess
     chmod 644 /var/www/html/.htaccess && \
     chown apache:apache /var/www/html/.htaccess

@@ -269,7 +269,7 @@ filename_revision_match = 70
 
 ; Force SSL connections site-wide and also sets the "Secure" flag for session cookies
 ; See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure
-force_ssl = Off
+force_ssl = On
 
 ; Force SSL connections for login only
 force_login_ssl = Off
@@ -342,7 +342,8 @@ smtp_port = 587
 smtp_auth = tls
 smtp_username = periodicos@uesb.edu.br
 ;smtp_password = rswiugsbnucbbykd
-smtp_password = xweuephwlksvithl
+;smtp_password = xweuephwlksvithl
+smtp_password = ynephfzxceufuoib
 ;
 ; Supported smtp_authtype: RAM-MD5, LOGIN, PLAIN, XOAUTH2 (see PHPMailer AuthType)
 ; (Leave blank to try them in that order)
